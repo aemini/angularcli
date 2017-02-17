@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import {FooterComponent} from "./common/footer.component";
 import {LeftNavComponent} from "./common/leftnav.component";
 import {TopNavComponent} from "./common/topnav.component";
+import {NavHeaderComponent} from "./common/navheader.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     LeftNavComponent,
+    NavHeaderComponent,
     TopNavComponent
   ],
   imports: [
