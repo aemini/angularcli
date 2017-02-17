@@ -11,11 +11,13 @@ import {NavHeaderComponent} from "./common/navheader.component";
 
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {routing} from "./app.routes";
+import {FinanceComponent} from "./finance/finance.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
+    FinanceComponent,
     FooterComponent,
     LeftNavComponent,
     NavHeaderComponent,

@@ -1,6 +1,7 @@
 import {Routes, RouterModule} from "@angular/router";
 import {ModuleWithProviders} from "@angular/core";
 import {dashboardRoutes} from "./dashboard/dashboard.routes";
+import {financeRoutes} from "./finance/finance.routes";
 
 let routes: Routes = [
   {
@@ -8,7 +9,8 @@ let routes: Routes = [
     redirectTo: '/dashboard',
     pathMatch: 'full'
   },
-  ...dashboardRoutes
+  ...dashboardRoutes,
+  ...financeRoutes
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
