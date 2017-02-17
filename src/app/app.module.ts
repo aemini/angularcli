@@ -12,6 +12,7 @@ import {NavHeaderComponent} from "./common/navheader.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {routing} from "./app.routes";
 import {FinanceComponent} from "./finance/finance.component";
+import {HrComponent} from "./hr/hr.component";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {FinanceComponent} from "./finance/finance.component";
     DashboardComponent,
     FinanceComponent,
     FooterComponent,
+    HrComponent,
     LeftNavComponent,
     NavHeaderComponent,
     TopNavComponent
