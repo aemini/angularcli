@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import {Title} from '@angular/platform-browser'
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
+
   title = 'app works!';
+  public constructor(private titleService: Title) {
+    titleService.setTitle("Dashboard");
+  }
+
 }
