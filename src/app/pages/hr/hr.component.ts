@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 
 @Component({
-  template: `Burasi da am got meme board uleyn`
+  templateUrl: '../../../views/pages/hr/hr.html'
 })
 
 export class HrComponent {}

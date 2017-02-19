@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 
 @Component({
-  template: `Burasi da yarrak board uleyn`
+  templateUrl: '../../../views/pages/finance/finance.html'
 })
 
 export class FinanceComponent {}

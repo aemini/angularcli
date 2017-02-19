@@ -9,10 +9,10 @@ import {LeftNavComponent} from "./common/leftnav.component";
 import {TopNavComponent} from "./common/topnav.component";
 import {NavHeaderComponent} from "./common/navheader.component";
 
-import {DashboardComponent} from "./dashboard/dashboard.component";
+import {DashboardComponent} from "./pages/dashboard/dashboard.component";
 import {routing} from "./app.routes";
-import {FinanceComponent} from "./finance/finance.component";
-import {HrComponent} from "./hr/hr.component";
+import {FinanceComponent} from "./pages/finance/finance.component";
+import {HrComponent} from "./pages/hr/hr.component";
 
 @NgModule({
   declarations: [

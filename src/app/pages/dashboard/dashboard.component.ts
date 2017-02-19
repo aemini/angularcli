@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 
 @Component({
-  template: `Burasi dassak board uleyn`
+  templateUrl: '../../../views/pages/dashboard/dashboard.html'
 })
 
 export class DashboardComponent {}
