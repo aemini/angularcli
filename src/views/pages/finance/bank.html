@@ -1,0 +1,20 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Country code</th>
+      <th>EFT code</th>
+      <th>Swift code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let bank of banks" (click)="onSelect(bank)">
+      <td>{{bank.id}}</td>
+      <td>{{bank.name}}</td>
+      <td>{{bank.countryCode}}</td>
+      <td>{{bank.eftCode}}</td>
+      <td>{{bank.swiftCode}}</td>
+    </tr>
+  </tbody>
+</table>

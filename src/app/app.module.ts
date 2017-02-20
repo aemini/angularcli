@@ -14,10 +14,12 @@ import {routing} from "./app.routes";
 import {DashboardComponent} from "./pages/dashboard/dashboard.component";
 import {FinanceComponent} from "./pages/finance/finance.component";
 import {HrComponent} from "./pages/hr/hr.component";
+import {BankComponent} from "./pages/finance/bank.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    BankComponent,
     DashboardComponent,
     FinanceComponent,
     FooterComponent,
