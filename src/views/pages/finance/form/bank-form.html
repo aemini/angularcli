@@ -1,0 +1,40 @@
+<div *ngIf="bank">
+  <form class="form-horizontal">
+
+    <div class="form-group">
+      <label for="id" class="col-sm-3 control-label">Id</label>
+      <div class="col-sm-9">
+        <input [ngModel]="bank.id" type="text" name="id" id="id" placeholder="Id" class="form-control" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="id" class="col-sm-3 control-label">Name</label>
+      <div class="col-sm-9">
+        <input [(ngModel)]="bank.name" type="text" name="name" id="name" placeholder="Name" class="form-control" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="id" class="col-sm-3 control-label">Country code</label>
+      <div class="col-sm-9">
+        <input [(ngModel)]="bank.countryCode" type="text" name="countryCode" id="countryCode" placeholder="Country code" class="form-control" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="id" class="col-sm-3 control-label">EFT code</label>
+      <div class="col-sm-9">
+        <input [(ngModel)]="bank.eftCode" type="text" name="eftCode" id="eftCode" placeholder="EFT code" class="form-control" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="id" class="col-sm-3 control-label">Swift code</label>
+      <div class="col-sm-9">
+        <input [(ngModel)]="bank.swiftCode" type="text" name="swiftCode" id="swiftCode" placeholder="Swift code" class="form-control" />
+      </div>
+    </div>
+
+  </form>
+</div>

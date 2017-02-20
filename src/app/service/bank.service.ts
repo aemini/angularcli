@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {AppSettings} from "../app.settings";
-import {Http, Response} from "@angular/http";
+import {Http, Response, RequestOptions, Headers} from "@angular/http";
 import {Observable} from "rxjs";
 import {Bank} from "../model/bank";
 
@@ -15,6 +15,16 @@ export class BankService {
     return this.http.get(this.url)
       .map(this.extractData)
       .catch(this.handleError);
+  }
+
+  updateBank(bank: Bank): Observable<Bank> {
+    let bodyString = JSON.stringify(bank);
+    let headers = new Headers({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'});
+    let options = new RequestOptions({headers: headers});
+
+    return this.http.put(this.url + '/' + bank.id, bodyString, options)
+      .map((response: Response) => response.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
 
   //TODO asagisi her yerde kullanilabilir, bunu ayiralim

@@ -16,11 +16,13 @@ import {FinanceComponent} from "./pages/finance/finance.component";
 import {HrComponent} from "./pages/hr/hr.component";
 import {BankComponent} from "./pages/finance/bank.component";
 import {AlertModule} from "ng2-bootstrap";
+import {BankFormComponent} from "./pages/finance/bank-form.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     BankComponent,
+    BankFormComponent,
     DashboardComponent,
     FinanceComponent,
     FooterComponent,
