@@ -113,10 +113,12 @@ $(document).ready(function () {
     });
 
     // Tooltips demo
+   /*
     $('.tooltip-demo').tooltip({
         selector: "[data-toggle=tooltip]",
         container: "body"
     });
+    */
 
 
     // Full height of sidebar
@@ -172,8 +174,10 @@ $(document).ready(function () {
         }
     });
 
+    /*
     $("[data-toggle=popover]")
         .popover();
+        */
 
     // Add slimscroll to element
     $('.full-height-scroll').slimscroll({
