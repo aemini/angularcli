@@ -11,4 +11,5 @@ export class BankFormComponent {
 
   @Input()
   bank: Bank;
+
 }
