@@ -1,15 +1,14 @@
 import {Injectable} from "@angular/core";
 import {AppSettings} from "../app.settings";
-import {Http, Response, RequestOptions, Headers} from "@angular/http";
+import {Response, RequestOptions, Headers} from "@angular/http";
 import {Observable} from "rxjs";
 import {Bank} from "../model/bank";
+import {HttpServiceCommons} from "./http-service.common";
 
 @Injectable()
-export class BankService {
+export class BankService extends HttpServiceCommons {
 
   private url = AppSettings.API_ENDPOINT + '/resource/bank';
-
-  constructor(private http: Http) {}
 
   getBanks(): Observable<Bank[]> {
     return this.http.get(this.url)
@@ -25,26 +24,6 @@ export class BankService {
     return this.http.put(this.url + '/' + bank.id, bodyString, options)
       .map((response: Response) => response.json())
       .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
-  }
-
-  //TODO asagisi her yerde kullanilabilir, bunu ayiralim
-
-  private extractData(response: Response) {
-    let body = response.json();
-    return body || {};
-  }
-
-  private handleError(error: Response | any) {
-    let errMsg: string;
-    if(error instanceof Response) {
-      const body = error.json() || '';
-      const err = body.error || JSON.stringify(body);
-      errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
-    } else {
-      errMsg = error.message ? error.message : error.toString();
-    }
-    console.log(errMsg);
-    return Observable.throw(errMsg);
   }
 
 }
