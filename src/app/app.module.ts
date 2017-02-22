@@ -16,10 +16,12 @@ import {FinanceComponent} from "./pages/finance/finance.component";
 import {HrComponent} from "./pages/hr/hr.component";
 import {BankComponent} from "./pages/finance/bank.component";
 import {BankFormComponent} from "./pages/finance/bank-form.component";
+import {BankAccountComponent} from "./pages/finance/bank-account.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    BankAccountComponent,
     BankComponent,
     BankFormComponent,
     DashboardComponent,
