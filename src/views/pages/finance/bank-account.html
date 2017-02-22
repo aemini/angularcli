@@ -14,6 +14,7 @@
             <tr>
               <th>Id</th>
               <th>Name</th>
+              <th>Type</th>
               <th>Bank</th>
               <th>IBAN</th>
               <th>Balance</th>
@@ -23,9 +24,10 @@
             <tr *ngFor="let account of bankAccounts" (click)="onSelect(account)">
               <td>{{account.id}}</td>
               <td>{{account.name}}</td>
+              <td>{{account.type}}</td>
               <td>{{account.bank.name}}</td>
               <td>{{account.iban}}</td>
-              <td>{{account.balance}}</td>
+              <td>{{account.balance}} {{account.currency.name}}</td>
             </tr>
           </tbody>
         </table>

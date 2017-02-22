@@ -1,4 +1,5 @@
 import {Bank} from "./bank";
+import {Currency} from "./currency";
 
 export class BankAccount {
   id: number;
@@ -8,5 +9,6 @@ export class BankAccount {
   accountNumber: number;
   balance: number;
   accountType: string;
+  currency: Currency;
   isActive: boolean;
 }
