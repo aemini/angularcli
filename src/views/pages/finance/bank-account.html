@@ -1,20 +1,36 @@
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Bank</th>
-      <th>IBAN</th>
-      <th>Balance</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let account of bankAccounts" (click)="onSelect(account)">
-      <td>{{account.id}}</td>
-      <td>{{account.name}}</td>
-      <td>{{account.bank.name}}</td>
-      <td>{{account.iban}}</td>
-      <td>{{account.balance}}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="ibox float-e-margins">
+      <div class="ibox-title">
+        <h5>Bank accounts</h5>
+        <div class="ibox-tools">
+          <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+          <a class="close-link"><i class="fa fa-times"></i></a>
+        </div>
+      </div>
+      <div class="ibox-content">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Bank</th>
+              <th>IBAN</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let account of bankAccounts" (click)="onSelect(account)">
+              <td>{{account.id}}</td>
+              <td>{{account.name}}</td>
+              <td>{{account.bank.name}}</td>
+              <td>{{account.iban}}</td>
+              <td>{{account.balance}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ibox-footer"></div>
+    </div>
+  </div>
+</div>
