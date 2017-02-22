@@ -1,7 +1,8 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, OnInit, ViewChild} from "@angular/core";
 import {Title} from "@angular/platform-browser";
 import {BankService} from "../../service/bank.service";
 import {Bank} from "../../model/bank";
+import {ModalDirective} from "ng2-bootstrap";
 
 @Component({
   moduleId: module.id,
@@ -14,6 +15,8 @@ export class BankComponent implements OnInit {
   errorMessage: string;
   banks: Bank[];
   selectedBank: Bank;
+
+  @ViewChild('lgModal') modal: ModalDirective;
 
   public constructor(private titleService: Title,
                      private bankService: BankService) {
@@ -33,6 +36,7 @@ export class BankComponent implements OnInit {
 
   onSelect(bank: Bank): void {
     this.selectedBank = bank;
+    this.modal.show();
   }
 
 }

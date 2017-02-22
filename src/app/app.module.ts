@@ -17,6 +17,7 @@ import {HrComponent} from "./pages/hr/hr.component";
 import {BankComponent} from "./pages/finance/bank.component";
 import {BankFormComponent} from "./pages/finance/bank-form.component";
 import {BankAccountComponent} from "./pages/finance/bank-account.component";
+import {ModalModule} from "ng2-bootstrap";
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {BankAccountComponent} from "./pages/finance/bank-account.component";
     BrowserModule,
     FormsModule,
     HttpModule,
+    ModalModule.forRoot(),
     routing
   ],
   providers: [Title],
