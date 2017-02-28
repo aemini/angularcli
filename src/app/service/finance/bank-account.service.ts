@@ -1,8 +1,8 @@
 import {Injectable} from "@angular/core";
-import {AppSettings} from "../app.settings";
+import {AppSettings} from "../../app.settings";
 import {Observable} from "rxjs";
-import {BankAccount} from "../model/bank-account";
-import {HttpServiceCommons} from "./http-service.common";
+import {BankAccount} from "../../model/finance/bank-account";
+import {HttpServiceCommons} from "../http-service.common";
 
 @Injectable()
 export class BankAccountService extends HttpServiceCommons {

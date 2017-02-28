@@ -1,5 +1,5 @@
 import {Component, Input} from "@angular/core";
-import {Bank} from "../../model/bank";
+import {Bank} from "../../model/finance/bank";
 
 @Component({
   moduleId: module.id,

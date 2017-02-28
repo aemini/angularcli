@@ -1,13 +1,12 @@
-import {Component, ViewChild} from "@angular/core";
-import {BankService} from "../../service/bank.service";
-import {Bank} from "../../model/bank";
-import {ModalDirective} from "ng2-bootstrap";
+import {Component, OnInit} from "@angular/core";
 import {Title} from "@angular/platform-browser";
+import {Employee} from "../../model/hr/employee";
+import {EmployeeService} from "../../service/hr/employee.service";
 
 @Component({
   moduleId: module.id,
   templateUrl: '../../../views/pages/hr/staff.html',
-  providers: [BankService],
+  providers: [EmployeeService],
   styles: [`.contact-box
 {
 	height:380px;
@@ -20,15 +19,13 @@ import {Title} from "@angular/platform-browser";
 }`]
 })
 
-export class StaffComponent {
+export class StaffComponent implements OnInit {
   errorMessage: string;
-  banks: Bank[];
-  selectedBank: Bank;
-
-  @ViewChild('lgModal') modal: ModalDirective;
+  employees: Employee[];
+  selectedEmployee: Employee;
 
   public constructor(private titleService: Title,
-                     private bankService: BankService) {
+                     private employeeService: EmployeeService) {
     titleService.setTitle("Staff");
   }
 
@@ -37,14 +34,14 @@ export class StaffComponent {
   }
 
   getBanks() {
-    this.bankService.getBanks().subscribe(
-      banks => this.banks = banks,
+    this.employeeService.getEmployees().subscribe(
+      employees => this.employees = employees,
       error => this.errorMessage = <any>error
     );
   }
 
-  onSelect(bank: Bank): void {
-    this.selectedBank = bank;
-    this.modal.show();
+  onSelect(employee: Employee): void {
+    this.selectedEmployee = employee;
+    //this.modal.show();
   }
 }

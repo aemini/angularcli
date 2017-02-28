@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
-import {BankAccountService} from "../../service/bank-account.service";
-import {BankAccount} from "../../model/bank-account";
+import {BankAccountService} from "../../service/finance/bank-account.service";
+import {BankAccount} from "../../model/finance/bank-account";
 import {Title} from "@angular/platform-browser";
 
 @Component({

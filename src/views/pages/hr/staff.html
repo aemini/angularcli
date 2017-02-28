@@ -8,22 +8,22 @@
     </div>
   </div>
 
-  <div *ngFor="let employee of banks" class="col-lg-3 col-md-6">
+  <div *ngFor="let employee of employees" class="col-lg-3 col-md-6">
     <div class="contact-box center-version">
       <i style="margin:5px; cursor:pointer;" onclick="sil('aaa1')" class="fa fa-times"></i><i style="margin:5px; cursor:pointer;" onclick="modalAcDuzenle('aaa1')" class="fa fa-pencil-square-o"></i>
       <a href="#">
         <img alt="image" class="img-circle resim" src="http://192.168.11.249/cellsigma/crmSonHali/crmSigma/img/1-2.jpg">
-        <h3 class="m-b-xs"><b>{{employee.name}}</b></h3>
+        <h3 class="m-b-xs"><b>{{employee.firstName}}{{(employee.middleName == null) ? '' : ' ' + employee.middleName}} {{employee.familyName}}</b></h3>
         <div class="font-bold">CEO</div>
       </a>
       <address style="text-align:center; margin:10px 0px 10px 0px;" class="m-t-md">
         <strong>Sigma telecom</strong><br>
-        <span onclick="editName()" id="mailEnter">mahdi.noorani@cellsigma.com</span>
+        <span>{{employee.email}}</span>
       </address>
       <div class="contact-box-footer">
         <div class="m-t-xs btn-group">
           <a class="btn btn-xs btn-white"><i class="fa fa-phone"></i> Call </a>
-          <a class="btn btn-xs btn-white"><i class="fa fa-envelope"></i> Email</a>
+          <a href="mailto:{{employee.email}}" class="btn btn-xs btn-white"><i class="fa fa-envelope"></i> Email</a>
           <a class="btn btn-xs btn-white"><i class="fa fa-user-plus"></i> Follow</a>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from "@angular/core";
 import {Title} from "@angular/platform-browser";
-import {BankService} from "../../service/bank.service";
-import {Bank} from "../../model/bank";
+import {BankService} from "../../service/finance/bank.service";
+import {Bank} from "../../model/finance/bank";
 import {ModalDirective} from "ng2-bootstrap";
 
 @Component({

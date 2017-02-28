@@ -1,27 +1,27 @@
 import {Injectable} from "@angular/core";
-import {AppSettings} from "../app.settings";
+import {AppSettings} from "../../app.settings";
 import {Response, RequestOptions, Headers} from "@angular/http";
 import {Observable} from "rxjs";
-import {Bank} from "../model/bank";
-import {HttpServiceCommons} from "./http-service.common";
+import {HttpServiceCommons} from "../http-service.common";
+import {Employee} from "../../model/hr/employee";
 
 @Injectable()
-export class BankService extends HttpServiceCommons {
+export class EmployeeService extends HttpServiceCommons {
 
-  private url = AppSettings.API_ENDPOINT + '/resource/bank';
+  private url = AppSettings.API_ENDPOINT + '/resource/hr/employee';
 
-  getBanks(): Observable<Bank[]> {
+  getEmployees(): Observable<Employee[]> {
     return this.http.get(this.url)
       .map(this.extractData)
       .catch(this.handleError);
   }
 
-  updateBank(bank: Bank): Observable<Bank> {
-    let bodyString = JSON.stringify(bank);
+  updateEmployee(employee: Employee): Observable<Employee> {
+    let bodyString = JSON.stringify(employee);
     let headers = new Headers({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'});
     let options = new RequestOptions({headers: headers});
 
-    return this.http.put(this.url + '/' + bank.id, bodyString, options)
+    return this.http.put(this.url + '/' + employee.id, bodyString, options)
       .map((response: Response) => response.json())
       .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
