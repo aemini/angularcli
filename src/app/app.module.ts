@@ -19,6 +19,7 @@ import {BankFormComponent} from "./pages/finance/bank-form.component";
 import {BankAccountComponent} from "./pages/finance/bank-account.component";
 import {ModalModule} from "ng2-bootstrap";
 import {StaffComponent} from "./pages/hr/staff.component";
+import {EmployeeDetails} from "./pages/hr/employee-details.component";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {StaffComponent} from "./pages/hr/staff.component";
     BankComponent,
     BankFormComponent,
     DashboardComponent,
+    EmployeeDetails,
     FinanceComponent,
     FooterComponent,
     HrComponent,

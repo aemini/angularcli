@@ -30,11 +30,11 @@ export class StaffComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getBanks();
+    this.getEmployees();
   }
 
-  getBanks() {
-    this.employeeService.getEmployees().subscribe(
+  getEmployees() {
+    this.employeeService.getEmployeeList().subscribe(
       employees => this.employees = employees,
       error => this.errorMessage = <any>error
     );

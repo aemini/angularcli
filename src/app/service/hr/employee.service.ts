@@ -10,10 +10,16 @@ export class EmployeeService extends HttpServiceCommons {
 
   private url = AppSettings.API_ENDPOINT + '/resource/hr/employee';
 
-  getEmployees(): Observable<Employee[]> {
+  getEmployeeList(): Observable<Employee[]> {
     return this.http.get(this.url)
       .map(this.extractData)
       .catch(this.handleError);
+  }
+
+  getEmployee(id: number): Observable<Employee> {
+    return this.http.get(this.url + "/" + id)
+      .map(this.extractData)
+      .catch(this.handleError)
   }
 
   updateEmployee(employee: Employee): Observable<Employee> {
