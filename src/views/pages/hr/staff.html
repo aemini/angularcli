@@ -14,7 +14,7 @@
       <a [routerLink]="['/hr/staff', 1]">
         <img alt="image" class="img-circle resim" src="http://192.168.11.249/cellsigma/crmSonHali/crmSigma/img/1-2.jpg">
         <h3 class="m-b-xs"><b>{{employee.firstName}}{{(employee.middleName == null) ? '' : ' ' + employee.middleName}} {{employee.familyName}}</b></h3>
-        <div class="font-bold">CEO</div>
+        <div class="font-bold">{{(employee.title) ? employee.title.name : ''}}</div>
       </a>
       <address style="text-align:center; margin:10px 0px 10px 0px;" class="m-t-md">
         <strong>Sigma telecom</strong><br>
