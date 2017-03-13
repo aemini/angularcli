@@ -34,6 +34,16 @@ export class BankComponent implements OnInit {
     );
   }
 
+  modalClose(): void {
+    this.modal.hide();
+    this.selectedBank = null;
+  }
+
+  saveChanges(bank: Bank): void {
+    this.bankService.updateBank(bank).subscribe();
+    this.modal.hide();
+  }
+
   onSelect(bank: Bank): void {
     this.selectedBank = bank;
     this.modal.show();
